@@ -11,6 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
   MediaPlayer mediaPlayer;
     int phraseNumber=0;
+    int check =0;
 
     public void onClick(View view) {
         Button button = (Button) view;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(this, getResources().getIdentifier(button.getTag().toString(), "raw", getPackageName()));
 
         mediaPlayer.start();
+        check =1;
 
     }
 
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
     }
 }
